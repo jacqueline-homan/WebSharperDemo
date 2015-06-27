@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{049C488E-329B-4B86-9880-6CBCFE056AB8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>WebsharperRetry</RootNamespace>
+    <AssemblyName>WebsharperRetry</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Diagnostics">
+      <HintPath>..\packages\Microsoft.Owin.Diagnostics.3.0.1\lib\net45\Microsoft.Owin.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.FileSystems">
+      <HintPath>..\packages\Microsoft.Owin.FileSystems.3.0.1\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.3.0.1\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.StaticFiles">
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Warp">
+      <HintPath>..\packages\WebSharper.Warp.3.2.14.17\lib\net45\WebSharper.Warp.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Owin">
+      <HintPath>..\packages\WebSharper.Owin.3.2.9.87\lib\net45\WebSharper.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpMultipartParser">
+      <HintPath>..\packages\WebSharper.Owin.3.2.9.87\lib\net45\HttpMultipartParser.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Core.JavaScript">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Core.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Core">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.InterfaceGenerator">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.InterfaceGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Html.Server">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Html.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Html.Client">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Html.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Sitelets">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Sitelets.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Web">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Main">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Main.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Collections">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Control">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Control.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.JavaScript">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.JQuery">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.JQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Testing">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\WebSharper.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="IntelliFactory.Xml">
+      <HintPath>..\packages\WebSharper.3.2.10.172\lib\net40\IntelliFactory.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.Compiler">
+      <HintPath>..\packages\WebSharper.Compiler.3.2.6.172\lib\net40\WebSharper.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="IntelliFactory.Core">
+      <HintPath>..\packages\WebSharper.Compiler.3.2.6.172\lib\net40\IntelliFactory.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\packages\WebSharper.Compiler.3.2.6.172\lib\net40\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>..\packages\WebSharper.Compiler.3.2.6.172\lib\net40\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>..\packages\WebSharper.Compiler.3.2.6.172\lib\net40\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSharper.AspNetMvc">
+      <HintPath>..\packages\WebSharper.AspNetMvc.3.2.9.16\lib\net40\WebSharper.AspNetMvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft SDKs\F#\3.1\Framework\v4.0\Microsoft.FSharp.Targets" />
+  <Import Project="..\packages\WebSharper.3.2.10.172\build\WebSharper.targets" Condition="Exists('..\packages\WebSharper.3.2.10.172\build\WebSharper.targets')" />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
